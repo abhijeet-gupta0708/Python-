@@ -29,50 +29,68 @@ whether it contains the word ‘twinkle’.'''
 as an integer. You need to read a file ‘test.txt’ which is either blank or
 contains the previous Hi-score. You need to write a program to update the Hiscore whenever the game() function breaks the Hi-score'''
 
-import random
-def change():
-    with open("test.txt","r") as f:
-         currscore=f.read()
-    print("Previous High score is ",currscore)
-    # f.seek(0)
-    newscore=int(currscore.split("=")[1].strip())
-#   f.close()
-    newscore +=1
-    with open("test.txt","w") as f:
-       f.write(f"highscore={newscore}")
-    f=open("test.txt")
-    newhighscore=f.read()
-    print("New high score is ",newhighscore)
-    f.close()
+# import random
+# def change():
+#     with open("test.txt","r") as f:
+#          currscore=f.read()
+#     print("Previous High score is ",currscore)
+#     # f.seek(0)
+#     newscore=int(currscore.split("=")[1].strip())
+# #   f.close()
+#     newscore +=1
+#     with open("test.txt","w") as f:
+#        f.write(f"highscore={newscore}")
+#     f=open("test.txt")
+#     newhighscore=f.read()
+#     print("New high score is ",newhighscore)
+#     f.close()
 
-def game ():
+# def game ():
     
-    getnum=int(input("Enter 1 for stone , 2 for :paper  , 3 for sessior ::"))
-    yourdict={1:"stone",2:"Paper",3:"Sessior"}
-    computerchoice=random.choice([1,2,3])
-    computerdict={1:"stone",2:"Paper",3:"Sessior"}
-    print("Your choice is :",yourdict[getnum])
-    print("Computer choice is :",computerdict[computerchoice])
+#     getnum=int(input("Enter 1 for stone , 2 for :paper  , 3 for sessior ::"))
+#     yourdict={1:"stone",2:"Paper",3:"Sessior"}
+#     computerchoice=random.choice([1,2,3])
+#     computerdict={1:"stone",2:"Paper",3:"Sessior"}
+#     print("Your choice is :",yourdict[getnum])
+#     print("Computer choice is :",computerdict[computerchoice])
 
-    if(computerchoice==getnum):
-         print("Its a draw ):")
+#     if(computerchoice==getnum):
+#          print("Its a draw ):")
  
-    else:
-         if(computerchoice==1 and getnum==2):
-             print("You Win Paper beats Stone .")
-             change()
-         elif(computerchoice==1 and getnum==3):
-             print("You Lose Stone smash sessior .")
-         elif(computerchoice==2 and getnum==1):
-             print("You Lose Paper covers stone .")
-         elif(computerchoice==2 and getnum==3):
-             print("You Win Paper cuts stone .")
-             change()
-         elif(computerchoice==3 and getnum==1):
-             print("You Win Stone smash sessior")
-             change()
-         elif(computerchoice==3 and getnum==2):
-             print("You lose Sessior cuts Paper .")
-         else:
-            print("You Entered Wrong Choice ")
-game ()
+#     else:
+#          if(computerchoice==1 and getnum==2):
+#              print("You Win Paper beats Stone .")
+#              change()
+#          elif(computerchoice==1 and getnum==3):
+#              print("You Lose Stone smash sessior .")
+#          elif(computerchoice==2 and getnum==1):
+#              print("You Lose Paper covers stone .")
+#          elif(computerchoice==2 and getnum==3):
+#              print("You Win Paper cuts stone .")
+#              change()
+#          elif(computerchoice==3 and getnum==1):
+#              print("You Win Stone smash sessior")
+#              change()
+#          elif(computerchoice==3 and getnum==2):
+#              print("You lose Sessior cuts Paper .")
+#          else:
+#             print("You Entered Wrong Choice ")
+# game ()
+
+
+
+
+
+'''A file contains a word “Donkey” multiple times. You need to write a program
+which replace this word with ##### by updating the same file. '''
+
+
+
+with open("poems.txt","r") as f:
+    readtext=f.read()
+
+newtext=readtext.lower().replace("donkey","######")
+print(newtext)
+with open("poems.txt","w") as f:
+    f.write(newtext)
+    
