@@ -21,6 +21,8 @@ working at Microsoft.'''
 '''2. Write a class “Calculator” capable of finding square, cube and square root of a
 self '''
 
+
+
 # number=int(input("Enter a Number"))
 # class calculator :
 #     square=number*number
@@ -29,10 +31,12 @@ self '''
 
 #     def calcu(self):
 #        print(self.square,self.cube,self.squareroot)
-
+# number=25
 # number=calculator()
-
 # number.calcu()
+
+
+
 
 
 
@@ -71,13 +75,13 @@ directly using ‘object.a = 0’. Does this change the class attribute?'''
 #        print(self.square,self.cube,self.squareroot)
 
 #     @staticmethod
-#     def greet():
-#         print("Static method implied Hello")
+#     def greet(number):
+#         print("Static method implied Hello",number)
 
 # number=calculator()
 
 # number.calcu()
-# number.greet()
+# number.greet(10)
 
 
 
